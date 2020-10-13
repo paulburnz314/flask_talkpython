@@ -1,0 +1,22 @@
+{% extends 'shared/_base.html' %}
+
+
+{% block content %}
+<body>
+<div>
+    <h2>Home Page for the Python Package Index Demo</h2>
+    <h3>Packages</h3>
+
+    {% for p in packages %}
+    <div>
+        <span class="title" style="color:green">
+        {{ p.name }}
+        </span>
+        <span class="version">
+        {{ p.version }}
+        </span>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Python Package Index (Demo){% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/site.css" />
+    <link rel="stylesheet" href="/static/css/nav.css"/>
+
+    {% block more_css %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse navbar-expand-md">
+    <a class="navbar-brand" href="/"><img src="/static/img/pypi-logo.svg"/></a>
+
+    <button class="navbar-toggler navbar-toggle" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar-toggler-icon">
+            <div class="nav-expand-line"></div>
+            <div class="nav-expand-line"></div>
+            <div class="nav-expand-line"></div>
+        </div>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+            <li class="nav-item"><a class="nav-link" href="/account/login">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="/account/register" id="last_nav_link">Register</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="content">
+	{% block content %}{% endblock %}
+</section>
+
+<footer>
+    <div class="copyright">
+        This is a fake site built during a <a href="https://training.talkpython.fm/courses/all">
+        talk python training course</a><br>
+        It mimics the real <a href="https://pypi.org">pypi.org</a><br>
+        <br>
+        Copyright Pablo Pythonos.
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    {% block additional_js %}{% endblock %}
+</body>
+</html>

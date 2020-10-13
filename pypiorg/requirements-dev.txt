@@ -1,0 +1,5 @@
+- requirements.txt
+
+pytest==6.0.1
+pytest-cov==2.10.1 
+webtest==2.0.35

@@ -1,0 +1,47 @@
+{% extends 'shared/_base.html' %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="hero-inner">
+        <div class="hero-title">Find, install and publish Python Packages with the Python Package Index </div>
+        <input type="text" placeholder=" Search Projects" class="form-control">
+    </div>
+
+    or <a href="#">browse projects</a>
+</div>
+
+<div class="pypi-stats">
+    <div class="stat">-1 projects</div>
+    <div class="stat">-1 releases</div>
+    <div class="stat">-1 users</div>
+</div>
+
+<div class="container project-list">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>WHITE LODGE</h3>
+        </div>
+        <div class="col-md-6">
+            <h3>New Releases</h3>
+            <div class="subtitle">Hot of the press: the newest project releases!</div>
+            {% for p in packages %}
+            <div class="project">
+                <div class="title">
+                    <a href="#">PROJ</a>
+                    <div class="desc">DESC</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-3">
+            <h3>BLACK LODGE</h3>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
